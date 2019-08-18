@@ -1,0 +1,8 @@
+<ul class="list-group">
+  <span [class]="myclass">Our Product list Are:</span>
+  <li (click)="productDetails(key)" class="list-group-item custom" [ngClass]="i%2!=0?'listClass':''"
+    *ngFor="let key of productData; let i=index;" [attr.data-index]="i">
+    {{i+1+'.'}} <a>{{key.name }}</a> | <span>Price:
+    </span>{{key.price}}
+  </li>
+</ul>

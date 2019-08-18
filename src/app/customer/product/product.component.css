@@ -1,0 +1,15 @@
+.listClass {
+    color:#444;
+    background-color: yellowgreen;
+}
+.titleclass {
+    color: goldenrod;
+    font-size: 20px;
+}
+
+.custom a {
+  color:rosybrown;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
