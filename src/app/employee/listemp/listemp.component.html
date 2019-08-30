@@ -1,3 +1,19 @@
-<p>
-  listemp works!
-</p>
+<div class="row" style="padding:60px;">
+  <table class="table table-bordered table-striped table-hover">
+    <tr>
+      <td>Name</td>
+      <td>Job</td>
+      <td>Salary</td>
+      <td>Action</td>
+    </tr>
+    <tr *ngFor="let e of employeedata">
+      <td>{{e.fullname}}</td>
+      <td>{{e.job}}</td>
+      <td>{{e.salary}}</td>
+      <td>
+        <button type="button" class="btn btn-link" (click)="empEdit(e)">edit</button> &nbsp;
+        <button type="button" class="btn btn-link" (click)="empRemove(e)">delete</button>
+      </td>
+    </tr>
+  </table>
+</div>

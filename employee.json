@@ -1,0 +1,28 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "fullname": "json-server",
+      "salary": "typicode",
+      "job": "hfhfh"
+    },
+    {
+      "fullname": "gsdgsdg",
+      "salary": "dfgdsg",
+      "job": "895685",
+      "id": 2
+    },
+    {
+      "fullname": "gggggggg",
+      "salary": "9888",
+      "job": "hfghfdhdf",
+      "id": 3
+    },
+    {
+      "fullname": "dgg",
+      "salary": "868655",
+      "job": "6796585",
+      "id": 4
+    }
+  ]
+}

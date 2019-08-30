@@ -1,3 +1,5 @@
+import { Employee } from './../../employee';
+import { EmpserviceService } from './../../empservice.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListempComponent implements OnInit {
 
-  constructor() { }
+  employeedata: Employee[];
+
+  constructor(private employe: EmpserviceService) { }
 
   ngOnInit() {
+    this.employe.getFullemployee().subscribe((empData) => {
+      this.employeedata = empData;
+    });
+  }
+
+  updateEmp(employeedata: Employee) {
+
   }
 
 }

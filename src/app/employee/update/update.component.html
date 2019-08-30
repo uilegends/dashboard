@@ -1,3 +1,40 @@
-<p>
-  update works!
-</p>
+<!-- main app container -->
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h3>Employe Update</h3>
+        <form [formGroup]="employeeForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" formControlName="fullname" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.fullname.errors }" />
+            <div *ngIf="submitted && f.fullname.errors" class="invalid-feedback">
+              <div *ngIf="f.fullname.errors.required">Full Name is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Salary</label>
+            <input type="text" formControlName="salary" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.salary.errors }" />
+            <div *ngIf="submitted && f.salary.errors" class="invalid-feedback">
+              <div *ngIf="f.salary.errors.required">Salary is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Job</label>
+            <input type="text" formControlName="job" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.job.errors }" />
+            <div *ngIf="submitted && f.job.errors" class="invalid-feedback">
+              <div *ngIf="f.job.errors.required">Job is required</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-primary">Update Employee</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
