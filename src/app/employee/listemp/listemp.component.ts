@@ -1,6 +1,7 @@
 import { Employee } from './../../employee';
 import { EmpserviceService } from './../../empservice.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listemp',
@@ -11,7 +12,8 @@ export class ListempComponent implements OnInit {
 
   employeedata: Employee[];
 
-  constructor(private employe: EmpserviceService) { }
+  constructor(private employe: EmpserviceService,
+    private router: Router) { }
 
   ngOnInit() {
     this.employe.getFullemployee().subscribe((empData) => {
@@ -19,8 +21,10 @@ export class ListempComponent implements OnInit {
     });
   }
 
-  updateEmp(employeedata: Employee) {
-
+  empEdit(employeedata: Employee) {
+    // console.log(employeedata);
+    this.router.navigate(['employee/edit']);
+    // return;
   }
 
 }
