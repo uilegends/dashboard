@@ -16,10 +16,18 @@ export class UpdateComponent implements OnInit {
 
   ngOnInit() {
     this.employeeForm = this.formBuilder.group({
+      id: [],
       fullname: ['', Validators.required],
       salary: ['', Validators.required],
       job: ['', Validators.required]
     });
+    let editId: number = parseInt(localStorage.getItem('editId'));
+    // console.log(editId);
+
+    this.myservice.getSingleEmployee(editId).subscribe(data => {
+      this.employeeForm.setValue(data);
+    })
+
   }
 
   // convenience getter for easy access to form fields
@@ -32,7 +40,7 @@ export class UpdateComponent implements OnInit {
     if (!this.employeeForm.invalid) {
       this.employeedata = { ...this.employeeForm.value };
       this.myservice.updateEmployee(this.employeedata).subscribe(data => {
-        this.employeeForm.setValue(data);
+        // this.employeeForm.setValue(data);
       });
       // console.log(this.employeeForm.value.fullname);
 

@@ -22,7 +22,7 @@ export class ListempComponent implements OnInit {
   }
 
   empEdit(employeedata: Employee) {
-    // console.log(employeedata);
+    localStorage.setItem('editId', employeedata.id.toString());
     this.router.navigate(['employee/edit']);
     // return;
   }

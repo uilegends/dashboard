@@ -18,6 +18,10 @@ export class EmpserviceService {
     return this.http.get<Employee[]>(BASE_URL);
   }
 
+  getSingleEmployee(employee: number): Observable<Employee> {
+    return this.http.get<Employee>(BASE_URL + "/" + employee);
+  }
+
   postEmployee(employee: Employee): Observable<Employee> {
     return this.http.post<Employee>(BASE_URL, employee);
   }
