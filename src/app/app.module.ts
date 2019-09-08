@@ -10,6 +10,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
